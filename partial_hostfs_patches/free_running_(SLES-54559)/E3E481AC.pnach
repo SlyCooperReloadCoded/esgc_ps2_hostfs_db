@@ -1,0 +1,24 @@
+[Automatic Gamefixes]
+patch=1,EE,001B1D1C,word,48428800
+patch=1,EE,001B1D20,word,4BE228EC
+patch=1,EE,001B1D24,word,4A0002FF
+patch=1,EE,001B1D28,word,4A0002FF
+patch=1,EE,001DE5C0,word,48428800
+patch=1,EE,001DE5C4,word,4BE3696C
+patch=1,EE,001DE5C8,word,4A0002FF
+patch=1,EE,001DE5CC,word,4A0002FF
+
+[Widescreen Patch]
+author=Arapapa
+patch=1,EE,0019C8B0,word,080A2598
+patch=1,EE,00289660,word,46000843
+patch=1,EE,00289664,word,3C013F40
+patch=1,EE,00289668,word,44815000
+patch=1,EE,0028966C,word,460A0842
+patch=1,EE,00289670,word,0806722D
+patch=1,EE,00214570,word,3C013F2B
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,001AB670,word,10400003
