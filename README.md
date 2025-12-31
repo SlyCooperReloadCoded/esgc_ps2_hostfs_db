@@ -6,7 +6,7 @@ This repository contains ***ABSOLUTELY NO ORIGINAL CODE OR COPYRIGHTED MATERIAL*
 
 ## What is Host Filesystem?
 
-The PlayStation 2 console has a lot of devices it can interface with, such as the disc drive (cdrom0), the memory cards (mc0/mc1), and the internal hard drive (hdd), but another one exists referred to internally as "host0". This is the Host Filesystem, and in the context of a devkit, it's a location on the same network that the devkit is connected to, and is where the actual game executable is. This is often used during a game's development, making it easier to switch out files since developers don't need to re-burn a new disc for every change they make.
+The PlayStation 2 console has a lot of devices it can interface with, such as the disc drive (cdrom0), the memory cards (mc0/mc1), and the internal hard drive (hdd), but another one exists referred to internally as "host0". This is the Host Filesystem, and in the context of a devkit, it's a location on the same network that the devkit is connected to, and is where the actual game executable is, such as a Windows computer. This is often used during a game's development, making it easier to switch out files since developers don't need to re-burn a new disc for every change they make.
 
 [PCSX2](https://pcsx2.net/), the PlayStation 2 emulator, has an option which simulates Host Filesystem, marking the directory the executable was launched in as the Host Filesystem, even if it's not literally on a network. Any software capable of reading from Host Filesystem will do so, and ***will not be limited to disc-reading speeds***, instead using the read speeds of the storage medium you have the files on. If your computer has an SSD, then files are read as fast as the software will allow. Wouldn't it be great if normal disc-based games could take advantage of this?
 
@@ -16,7 +16,7 @@ A surprising amount of games actually have leftover host0 paths in their executa
 
 ## Installation
 
-These patches are in the form of [LunarIPS](https://www.romhacking.net/utilities/240/) patches. This allows only the changed sectors of files to be shared, solving the issue of needing to distribute entire executables, which is software piracy. Simply apply the patches to the specified executables and/or IRX modules.
+These patches are in the form of [LunarIPS](https://www.romhacking.net/utilities/240/) patches. This allows only the changed sectors of files to be shared, solving the issue of needing to distribute entire executables, which is software piracy. Simply apply the patches to the specified executables and/or IRX modules, then rename the executable to something you'll remember and give it the ".elf" file extension.
 
 ## FAQ
 
