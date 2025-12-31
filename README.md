@@ -8,20 +8,20 @@ The PlayStation 2 console has a lot of devices it can interface with, such as th
 
 PCSX2, the PlayStation 2 emulator, has an option which simulates Host Filesystem, marking the directory the executable was launched in act as the Host Filesystem, even if it's not literally on a network. Any software capable of reading from Host Filesystem will do so, and ***will not be limited to disc-reading speeds***, instead using the read speeds of the storage medium you have the files on. If your computer has an SSD, then files are read as fast as the software will allow. Wouldn't it be great if normal disc-based games could take advantage of this?
 
-Unfortunately, unlike Dolphin which can extract GameCube games and play them that way or a modded Xbox which can install games to an internal hard drive, the PlayStation 2 has many different types of file access methods, a handful requiring the files be on a disc specifically, and will fail to load certain files ***even if the path to the file is correct***. Some games go beyond this, hardcoding file reads to a specific method, and some games use custom methods. A select few, notably games that were released on CD-ROM, tend to read data from LBA, or a specific physical sector on the disc. The first three Sly Cooper games are a prime example of this, as they don't use files, instead reading from a hardcoded list of sectors stored in the game executable. This is why a disc image from any of those games will appear to be mostly empty if loaded in ISO-viewing software.
+Unfortunately, unlike Dolphin which can extract GameCube games and play them that way or a modded Xbox which can install games to an internal hard drive, the PlayStation 2 has many different types of file access methods, a handful requiring the files be on a disc specifically, and will fail to load certain files ***even if the path to the file is correct***. Some games go beyond this, either hardcoding file reads to a specific method or using custom methods. A select few tend to read data from LBA, or a specific physical sector on the disc, and probably won't be able to do anything with file paths. The first three Sly Cooper games are a prime example of this, as they don't use files, instead reading from a hardcoded list of sectors stored in the game executable. This is why a disc image from any of those games will appear to be mostly empty if loaded in ISO-viewing software.
 
 A surprising amount of games actually have leftover host0 paths in their executable, and potentially even a flag that switches the game between cdrom0 and host0. Some games don't have such a flag, but play nicely if the cdrom0 paths are manually edited to be host0 paths. This repository contains Host Filesystem patches that I and others in the [Extreme Sports Game Collective Discord server](https://discord.gg/aHA8DTyuNZ) have created, since the Discord server is really obscure and it massively reduces the visibility of these patches. Credit will be given in each patch's folder where applicable.
 
 ## FAQ
 
-Q: 
+**Q:** Can every game get a Host Filesystem patch like the ones in this repository?
 
-A: 
+**A:** No. As I explained before, lots of games are hardcoded to look for files from a disc location specifically. If you had the source code or a completed decompilation of one of these games, you COULD in theory write custom code to create such a patch, however at that point it would be more wise to port that game to other, more powerful systems that weren't limited in this way.
 
-Q: 
+**Q:** What are some advantages to running games through the Host Filesystem?
 
-A: 
+**A:** Apart from much faster loading times and seek times no longer being a factor, ease of modding is a big plus. Imagine a game that had a modding community because its game archives could be unpacked and repacked. Now imagine that game could actually read from extracted archives instead of packed archives. This would suck if you had to rebuild the game's ISO for every change you made, but if you were able to run a game from a directory on a blazing-fast storage medium instead of a disc image, wouldn't that be the most ideal scenario? One or more of the patches in this repository is for a game that DOES have a completely loose filesystem with no compressed archives whatsoever, and it does benefit in this way.
 
-Q: 
+**Q:** 
 
-A: 
+**A:** 
