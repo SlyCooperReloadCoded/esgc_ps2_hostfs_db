@@ -18,6 +18,16 @@ A surprising amount of games actually have leftover host0 paths in their executa
 
 These patches are in the form of [LunarIPS](https://www.romhacking.net/utilities/240/) patches. This allows only the changed sectors of files to be shared, solving the issue of needing to distribute entire executables, which is software piracy. Simply apply the patches to the specified executables and/or IRX modules, then rename the executable to something you'll remember and give it the ".elf" file extension.
 
+To save some time later, create a folder in your PCSX2 install directory and name it "hostfs_games". Whenever you need to give a game access to the original disc image, put it in there. This will ensure that the original disc image is not scanned by the games list and won't show up there:
+
+<img width="918" height="439" alt="Capture" src="https://github.com/user-attachments/assets/9f43c4ac-3c2f-4832-85cd-5428a2ee4353" />
+
+In the patched game's custom configuration, set the Disc Path to the original disc image which you stored in the "hostfs_games" folder:
+
+<img width="1457" height="559" alt="Capture2" src="https://github.com/user-attachments/assets/db0799b6-5255-4d59-8349-0151496cd9a4" />
+
+This will result in the game reading from the patched paths where applicable, but it'll still be able to read from a disc image where it needs to. This will also let PCSX2 detect the game's actual title and region info, making it a valid RetroAchievements title as well, as applying the correct automatic rendering fixes. Note that this will NOT make the built-in patches appear in the "Patches" submenu, so you'll need to manually find those, rename them to the new CRC, put them into PCSX2's "cheats" directory, and activate them that way.
+
 ## FAQ
 
 **Q:** Can every game get a Host Filesystem patch like the ones in this repository?
