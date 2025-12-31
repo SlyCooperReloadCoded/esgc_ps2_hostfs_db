@@ -1,6 +1,6 @@
 # Freestyle Metal X (SLUS-20494)
 
-This patch fully separates the game from its disc image, and decreases loading times by an INSANE amount of time. While not in the game's automatic gamefixes, you'll need to enable these two settings if you plan to play using higher resolutions:
+This patch fully separates the game from its disc image, and decreases loading times by an INSANE amount. While not in the game's automatic gamefixes, you'll need to enable these two settings if you plan to play using higher resolutions:
 
 <img width="1430" height="912" alt="Capture" src="https://github.com/user-attachments/assets/1ec68467-72cd-43f2-99ca-00330826cd20" />
 
@@ -39,3 +39,4 @@ https://github.com/user-attachments/assets/503a5ef9-fad0-4053-bdc4-dd13c79b61e8
 Host Filesystem:
 
 https://github.com/user-attachments/assets/639516df-e210-428b-9488-32207633ea39
+
