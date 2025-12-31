@@ -10,4 +10,4 @@ In the HostFS-patched game's custom configuration, set the Disc Path to the orig
 
 <img width="1457" height="559" alt="Capture2" src="https://github.com/user-attachments/assets/db0799b6-5255-4d59-8349-0151496cd9a4" />
 
-This will result in the game reading from the patched paths where applicable, but it'll still be able to read from a disc image where it needs to.
+This will result in the game reading from the patched paths where applicable, but it'll still be able to read from a disc image where it needs to. This will also achieve the same effect as the setup for Full Host Filesystem Patches, letting PCSX2 detect the game's actual title and region info, making it a valid RetroAchievements title as well as applying the right automatic rendering fixes.
