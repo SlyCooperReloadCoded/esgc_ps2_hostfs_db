@@ -1,0 +1,5 @@
+[HostFS]
+patch=1,EE,202516B0,extended,00000001
+
+[60 FPS]
+patch=1,EE,2016F998,extended,2C630001
