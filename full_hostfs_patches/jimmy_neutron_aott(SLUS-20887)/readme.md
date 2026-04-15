@@ -4,5 +4,7 @@ This is specifically for the American release of the game, and it completely sep
 
 Note that some people report that the patch doesn't work on case-sensitive filesystems as well as certain BIOS revisions, yet others, myself included, can't reproduce these issues.
 
+UPDATE (4/15/2026): A flaw in the included "Skippable Cutscenes" patch was discovered where it softlocks the game upon making an Invention or Super Invention, as well as skipping some cutscenes automatically. I'll remove this warning when (and if) a new fixed version is created.
+
 Credit goes to modeco80 for reverse-engineering this title and finding a leftover native Host Filesystem reading mode.
 
