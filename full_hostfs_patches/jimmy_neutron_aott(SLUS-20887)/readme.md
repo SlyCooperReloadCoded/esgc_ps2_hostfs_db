@@ -4,6 +4,6 @@ This is specifically for the American release of the game, and it completely sep
 
 Also included is a PNACH cheat containing the Widescreen patch and the Skippable Cutscenes patch. Put it in the cheats folder and activate them as if they were normal cheats.
 
-Note that some people report that the patch doesn't work on case-sensitive filesystems as well as certain BIOS revisions, yet others, myself included, can't reproduce these issues.
+Note that if you're on Linux, you'll neeed to enable case-folding for the folder that you extract the disc image to, as the game code reads from files in uppercase and lowercase in different scenarios.
 
 Credit goes to modeco80 for reverse-engineering this title and finding a leftover native Host Filesystem reading mode.
