@@ -18,6 +18,8 @@ A surprising amount of games actually have leftover host0 paths in their executa
 
 Unless otherwise specified, these patches are in the form of [LunarIPS](https://www.romhacking.net/utilities/240/) patches. This allows only the changed sectors of files to be shared, solving the issue of needing to distribute entire executables, which also counts as software piracy.
 
+Partial Host Filesystem patches need the disc image accessible for one reason or another, while Full Host Filesystem patches completely separate all the disc image's contents, letting you run the entire game from a disconnected folder. Keep this in mind going forward.
+
 When extracting a game image for patching, your executable will usually have a name like "SCXX_XXX.XX". If it's an American game, it'll usually be "SCUS_XXX.XX". If it's a European game, it'll usually be "SCES_XXX.XX". If it's a Japanese game, it'll usually be "SCPS_XXX.XX" or "SCJS_XXX.XX". This file is the one you need to patch. After patching it, rename it - file extension included - to the game's actual name or something very similar so you could spot it in a list of names later on, and with the ".elf" file extension. For example, if you're applying the patch to the American release of Jimmy Neutron: Attack of the Twonkies, rename the executable to "JNAoTT.elf", like this:
 
 <img width="1504" height="364" alt="6" src="https://github.com/user-attachments/assets/d9fd96dd-7161-4d8c-90a2-2116a7887d4e" />
@@ -39,12 +41,14 @@ Then, in PCSX2's "Game List" menu, add each of these games' folders individually
 
 This will both add the games to the emulator while preventing it from manually scanning every subfolder for more games.
 
-After you've done this, go back to PCSX2's install directory and create a new folder named "hostfs_game_images", which can be seen in the same screenshot from earlier. Every time you need to give a game disc access but you don't want the original game image to show up as a game, put it in your "hostfs_game_images" folder then set the "Disc Path" in the game's custom configuration so it points at the game image, like this:
+After you've done this, go back to PCSX2's install directory and create a new folder named "hostfs_game_images", which can be seen in the same screenshot from earlier. Every time you need to give a game disc access for use with Partial Host Filesystem patches, you don't want the original game image to show up as a game, so instead, put it in your "hostfs_game_images" folder then set the "Disc Path" in the game's custom configuration so it points at the game image, like this:
 
 <img width="1488" height="487" alt="4" src="https://github.com/user-attachments/assets/1a52175e-ecca-47bb-b0d7-1bcac4197722" />
 <img width="1465" height="611" alt="5" src="https://github.com/user-attachments/assets/8bbf2d13-da69-4845-8b80-222d1a1447ed" />
 
 This will result in the game reading from the patched paths where applicable, but it'll still be able to read from a disc image where it needs to. This will also let PCSX2 detect the game's actual title and region info, making it a valid RetroAchievements title, as well as applying the correct automatic rendering fixes. Note that this will NOT make the built-in patches appear in the "Patches" submenu, so you'll need to manually find those inside "resources/patches.zip", rename them to the new CRC as seen in the game's custom config, put them into PCSX2's "cheats" directory, and activate them that way. For any games that have automatic gamefixes which include a patch required for the game to function properly, I've included those and any other patches those games have alongside the Host Filesystem patch.
+
+Additionally, you can still give games patched with Full Host Filesystem patches disc access for the extra benefits it provides, or if you're a power user and know what all the advanced settings do (i.e. you're ***NOT*** following a "Best Settings for Performance" YouTube video) you can navigate to "resources/GameIndex.yaml", locate your game in the list, and manually apply all the settings yourself. The choice is entirely up to you.
 
 ## FAQ
 
