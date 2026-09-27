@@ -41,7 +41,7 @@ Then, in PCSX2's "Game List" menu, add each of these games' folders individually
 
 This will both add the games to the emulator while preventing it from manually scanning every subfolder for more games.
 
-After you've done this, go back to PCSX2's install directory and create a new folder named "hostfs_game_images", which can be seen in the same screenshot from earlier. Every time you need to give a game disc access for use with Partial Host Filesystem patches, you don't want the original game image to show up as a game, so instead, put it in your "hostfs_game_images" folder then set the "Disc Path" in the game's custom configuration so it points at the game image, like this:
+After you've done this, go back to PCSX2's install directory and create a new folder named "hostfs_game_images", which can be seen in the same screenshot from earlier. Every time you need to give a game disc access for use with Partial Host Filesystem patches, you don't want the original game image to show up as a game. Instead, put it in your "hostfs_game_images" folder then set the "Disc Path" in the game's custom configuration so it points at the game image, like this:
 
 <img width="1488" height="487" alt="4" src="https://github.com/user-attachments/assets/1a52175e-ecca-47bb-b0d7-1bcac4197722" />
 <img width="1465" height="611" alt="5" src="https://github.com/user-attachments/assets/8bbf2d13-da69-4845-8b80-222d1a1447ed" />
