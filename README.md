@@ -18,7 +18,7 @@ A surprising amount of games actually have leftover host0 paths in their executa
 
 Unless otherwise specified, these patches are in the form of [LunarIPS](https://www.romhacking.net/utilities/240/) patches. This allows only the changed sectors of files to be shared, solving the issue of needing to distribute entire executables, which also counts as software piracy.
 
-Partial Host Filesystem patches need the disc image accessible for one reason or another, while Full Host Filesystem patches completely separate all the disc image's contents, letting you run the entire game from a disconnected folder. Keep this in mind going forward.
+Partial Host Filesystem patches need the disc image accessible for one reason or another, while Full Host Filesystem patches completely separate all the disc image's contents, letting you run the entire game from a disconnected folder and delete the included "system.cnf" file without consequence. Keep this in mind going forward.
 
 When extracting a game image for patching, your executable will usually have a name like "SCXX_XXX.XX". If it's an American game, it'll usually be "SCUS_XXX.XX". If it's a European game, it'll usually be "SCES_XXX.XX". If it's a Japanese game, it'll usually be "SCPS_XXX.XX" or "SCJS_XXX.XX". This file is the one you need to patch. After patching it, rename it - file extension included - to the game's actual name or something very similar so you could spot it in a list of names later on, and with the ".elf" file extension. For example, if you're applying the patch to the American release of Jimmy Neutron: Attack of the Twonkies, rename the executable to "JNAoTT.elf", like this:
 
