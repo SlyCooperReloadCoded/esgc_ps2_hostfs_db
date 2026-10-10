@@ -13,3 +13,5 @@ so it doesn't contain the dollar signs anymore, like this:
 ***"StreamDirs"="STREAMS\DIALOG;STREAMS\MUSIC;STREAMS\CINE"***
 
 The rest should be self-explanatory. This patch also makes the game print all debug console output to PCSX2's system console, which seems like what the game original did during development, but who can really say? This is groundbreaking because it allows you to finally scroll through long lists that the console can output.
+
+Note that this patch is for the original release. The "Rev 1" version has updated code and the patch isn't compatible with it. Also, there's an inconsistent bug where video playback will cause a full game crash. Not all users have this bug, so debugging it will take time. If you skip all the videos, no further crashes will occurr.
