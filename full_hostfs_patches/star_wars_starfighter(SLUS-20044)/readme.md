@@ -1,6 +1,6 @@
 # Star Wars: Starfighter
 
-This patch, created by modeco80, completely separates this game from its disc image. This was a real feat considering it was previously hardcoded to use a set LBA for each file. This one is an xdelta patch rather than a LunarIPS patch, and its source code can be found at the link below:
+This patch, created by modeco80, completely separates the original release (NOT "Rev 1") of this game from its disc image. This was a real feat considering it was previously hardcoded to use a set LBA for each file. This one is an xdelta patch rather than a LunarIPS patch, and its source code can be found at the link below:
 
 https://github.com/modeco80/europa-hostfs
 
@@ -14,4 +14,4 @@ so it doesn't contain the dollar signs anymore, like this:
 
 The rest should be self-explanatory. This patch also makes the game print all debug console output to PCSX2's system console, which seems like what the game original did during development, but who can really say? This is groundbreaking because it allows you to finally scroll through long lists that the console can output.
 
-Note that this patch is for the original release. The "Rev 1" version has updated code and the patch isn't compatible with it. Also, there's an inconsistent bug where video playback will cause a full game crash. Not all users have this bug, so debugging it will take time. If you skip all the videos, no further crashes will occurr.
+Note that there's an inconsistent bug where video playback will cause a full game crash. Not all users have this bug, so debugging it will take time. If you skip all the videos, no further crashes will occur.
